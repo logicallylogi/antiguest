@@ -1,10 +1,10 @@
-// setInterval is used so every 50 milliseconds, the code inside these brackets runs
-// Docs: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
-
-setInterval(
-    () => {
-            // Now this code should run every 50 milliseconds! This is so there is no "flicker"
-            // when messages are added by the software and removed by the extension
+// We use this jQuery Listener right here to listen to when every AJAX call is completed
+// AJAX is the type of request made to update the chat's live feed, so we know every time AJAX completes,
+// the messages in chat are probably updated and need removal if they are guest-posted
+// Docs: https://api.jquery.com/ajaxcomplete/
+$(document).on( "ajaxComplete", function() {
+            // This is much lighter on resources and completely removes any "flicker" that might've been seen
+            // with the last revision
 
             // Docs: (for for( const node...) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
             // Docs: (for $(''))              https://api.jquery.com/attribute-equals-selector/
@@ -21,6 +21,4 @@ setInterval(
                 // This removes the message instead of just the avatar. Unintended side-effects may
                 // appear regarding the user list and DMs with guests, though.
             }
-        }, 50)
-
-// And of course we do this every 50 milliseconds
+        });
