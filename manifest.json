@@ -1,6 +1,6 @@
 {
   "name": "Codychat Anti-Guest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "logicallylogi@outlook.com",
   "homepage_url": "https://github.com/logicallylogi/antiguest",
   "description": "Auto-hide guest messages on Codychat-powered websites!",
