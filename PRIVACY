@@ -1,0 +1,18 @@
+WHAT DO WE COLLECT:
+This extension is designed around using Javascript libraries that are already embedded in Codychat software solutions. As a result, this plugin makes no direct call to any CDN or web service, and instead listens for web requests that already are being made and reacts using built-in methods. In this way, we collect zero information about you.
+
+WHAT DOES CODYCHAT COLLECT:
+In general, the privacy of any Codychat software is dependent on the website you are using, and not this plugin. This plugin makes no effort to protect your privacy, since it may be misused to evade valid kicks/bans and that is the opposite of what this plugin is for.
+Even though the Codychat website you use may have different privacy settings and practices, this is the gist of the basic Codychat software:
+- All kick/ban/mute reasons are stored for the duration of your account
+- All prior usernames and accounts are stored for the longevity of your account and/or the other accounts
+- Your current Email and IP address is stored on the Codychat software
+- If you are kicked/banned for posting social media, and your social media username was in the kick reason, that kick reason will likely last for your entire account duration
+- If you are banned, it is standard that your account and all data on it will be stored for a year or more and you WILL NOT be able to delete it. This is due to the Codychat software and NOT this plugin, and you can email the website you chat on and request PII be expunged per GDPR rules
+- Depending on the site, all IP addresses you've logged in with may be stored for the longevity of your account
+- Depending on the site, all emails you've logged in with may be stored for the longevity of your account
+- If you have paid for VIP, depending on the site, your payment details may be stored on the website or a payment processing company (Like PayPal or Stripe)
+
+PLEASE NOTE THE ABOVE PRIVACY RULES ARE NOT BECAUSE OF THIS PLUGIN NOR ARE THEY AVOIDABLE VIA THIS PLUGIN - THIS PLUGIN DOES NOT MODIFY THE CODYCHAT SOFTWARE OR THE DATA YOU SEND TO IT!
+PLEASE BE AWARE THAT CODYCHAT AND THE SITES THAT USE IT HAVE THEIR OWN DISCRETION ON WHAT DATA TO STORE/KEEP/COLLECT AND THESE GENERAL RULES ARE PURELY A BASIC ANALYSIS OF THE CODYCHAT SOFTWARE AND ARE NOT LEGALLY BINDING AND ARE ENTIRELY SUBJECTIVE PER-SITE
+IF YOU HAVE PRIVACY CONCERNS, CHECK THE PRIVACY POLICY OF THE CODYCHAT SITE YOU CHAT ON, AS THIS PLUGIN IN NO WAY CHANGES WHAT DATA THE CODYCHAT SITE COLLECTS AND COLLECTS NO DATA OF IT'S OWN!
