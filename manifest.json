@@ -5,14 +5,10 @@
   "author": "logicallylogi@outlook.com",
   "homepage_url": "https://github.com/logicallylogi/antiguest",
   "description": "Auto-hide guest messages on Codychat-powered websites!",
-  "host_permissions": ["https://*.chat-avenue.com/*", "https://*.kidschat.net/*", "https://*.teenchat.org/*"],
-  "optional_host_permissions":[
-    "https://*/*",
-    "http://*/*"
-  ],
+  "host_permissions": ["https://*.chat-avenue.com/*", "https://*.kidschat.net/*", "https://*.teenchat.org/*", "https://*.321chat.com/*"],
   "content_scripts": [
     {
-      "matches": ["https://*.chat-avenue.com/*", "https://*.kidschat.net/*", "https://*.teenchat.org/*"],
+      "matches": ["https://*.chat-avenue.com/*", "https://*.kidschat.net/*", "https://*.teenchat.org/*", "https://*.321chat.com/*"],
       "js": ["background.js"],
       "world": "MAIN",
       "run_at": "document_end",
