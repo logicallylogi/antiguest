@@ -1,4 +1,5 @@
 {
+  "manifest_version": 3,
   "name": "Codychat Anti-Guest",
   "version": "1.0.1",
   "author": "logicallylogi@outlook.com",
@@ -6,8 +7,10 @@
   "description": "Auto-hide guest messages on Codychat-powered websites!",
   "content_scripts": [
     {
-      "matches": ["*://chat-avenue.com/*", "*://teen-chat.org/chat", "*://kidschat.net/kidschat", "*://www.321chat.com/*"],
+      "matches": ["<all_urls>"],
       "js": ["background.js"],
+      "world": "MAIN",
+      "run_at": "document_end",
       "all_frames": true
     }
   ]

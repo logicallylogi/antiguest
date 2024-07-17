@@ -1,24 +1,25 @@
-// We use this jQuery Listener right here to listen to when every AJAX call is completed
-// AJAX is the type of request made to update the chat's live feed, so we know every time AJAX completes,
-// the messages in chat are probably updated and need removal if they are guest-posted
-// Docs: https://api.jquery.com/ajaxcomplete/
-$(document).on( "ajaxComplete", function() {
-            // This is much lighter on resources and completely removes any "flicker" that might've been seen
-            // with the last revision
+setInterval(() => {
+    // We use setInterval to make the script that actually does everything run every 100ms
+    // 100ms is 1/10th of a second, which has very little flicker.
+    // Docs: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
-            // Docs: (for for( const node...) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
-            // Docs: (for $(''))              https://api.jquery.com/attribute-equals-selector/
-            // Docs: (for $('.chat_avatar...) https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors
-            for (const node of $('.chat_avatar[data-rank="0"]') ) {
-                // The line above says, basically "for every element that is a chat avatar with rank 0 (guest rank), do this"
-                // Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode
-                node.parentNode.remove();
-                // And this is to delete the "parent node" (the container the element/avatar is in)
+    for (const node of $('div[data-rank="0"]') ) {
+        // The line above says, basically "for every element that is a chat avatar with rank 0 (guest rank), do this"
+        // Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode
 
-                // Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode
-                // ^^^^ First example in docs is also documentation for parentNode.remove();
+        if (node.parentNode.nodeName === "LI") {
+            // We want to make sure the node is a "list item" that way only messages are deleted
+            // Resource: https://stackoverflow.com/questions/254302/how-can-i-determine-the-type-of-an-html-element-in-javascript
+            // Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName
 
-                // This removes the message instead of just the avatar. Unintended side-effects may
-                // appear regarding the user list and DMs with guests, though.
-            }
-        });
+            node.parentNode.remove();
+            // And this is to delete the "parent node" (the container the element/avatar is in)
+            // Docs: https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode
+
+            // ^^^^ First example in docs is also documentation for parentNode.remove();
+            // This removes the message instead of just the avatar. Unintended side-effects may
+            // appear regarding the user list and DMs with guests, though.
+        }
+    } 
+}, 100);
+// Here's where we actually define setInterval's 100ms
