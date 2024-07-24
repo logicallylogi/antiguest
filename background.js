@@ -1,7 +1,7 @@
-setInterval(() => {
-    // We use setInterval to make the script that actually does everything run every 100ms
-    // 100ms is 1/10th of a second, which has very little flicker.
-    // Docs: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+$(document).on("ajaxComplete ", () => {
+    // We use jQuery's "AJAXComplete" handler which detects the chat is updated and deletes the
+    // elements before the user can see them. This has zero flicker.
+    // Docs: https://api.jquery.com/ajaxComplete/#on-%22ajaxComplete%22-handler
 
     for (const node of $('div[data-rank="0"]') ) {
         // The line above says, basically "for every element that is a chat avatar with rank 0 (guest rank), do this"
@@ -21,5 +21,4 @@ setInterval(() => {
             // appear regarding the user list and DMs with guests, though.
         }
     } 
-}, 100);
-// Here's where we actually define setInterval's 100ms
+});
